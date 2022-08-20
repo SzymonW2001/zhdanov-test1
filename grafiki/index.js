@@ -156,7 +156,7 @@ setInterval(() => {
 function animationShit(){
     losing = true
     obj1.style.animationPlayState = "paused"
-    document.location.reload(true)
+    window.location = "https://szymonw2001.github.io/zhdanov-test1/zhdanov.html";
 }
 
 
