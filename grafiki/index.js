@@ -156,7 +156,7 @@ setInterval(() => {
 function animationShit(){
     losing = true
     obj1.style.animationPlayState = "paused"
-    window.location = "https://szymonw2001.github.io/zhdanov-test1/zhdanov.html";
+    window.location = "https://en.wikipedia.org/wiki/Monkeypox";
 }
 
 
