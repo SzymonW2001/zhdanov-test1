@@ -144,8 +144,11 @@ setInterval(() => {
 
     if((zhdanovPosition.right+10>up1Position.left && zhdanovPosition.left < up1Position.right && zhdanovPosition.top<up1Position.bottom)
     || (zhdanovPosition.right+10>up1Position.left && zhdanovPosition.left < up1Position.right && zhdanovPosition.bottom>down1Position.top)){
-        animationShit()
-
+        let rigth =parseInt(window.getComputedStyle(zhdanov).getPropertyValue("right"))
+            zhdanov.style.rigth = (rigth-1000)+"px"
+            setTimeout(() => {
+                animationShit()
+    }, 100);
     }
 
 
@@ -156,7 +159,7 @@ setInterval(() => {
 function animationShit(){
     losing = true
     obj1.style.animationPlayState = "paused"
-    window.location = "https://en.wikipedia.org/wiki/Monkeypox";
+    window.location.reload()
 }
 
 
