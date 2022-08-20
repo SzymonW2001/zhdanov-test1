@@ -156,7 +156,7 @@ setInterval(() => {
 function animationShit(){
     losing = true
     obj1.style.animationPlayState = "paused"
-    location.reload(true)
+    document.location.reload(true)
 }
 
 
