@@ -1,0 +1,284 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #333;
+    overflow: hidden;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template: 1fr 10fr 6fr/ 1fr;
+}
+.grid-item{
+    display: flex;
+    flex-wrap: wrap;
+}
+.visible{
+    z-index: 1;
+
+}
+#game{
+    background-color: aliceblue;
+    z-index: 1;
+    background-image: url(./back.png);
+    background-size: cover;
+}
+.zhdanov, .zhdanov > img{
+    position: relative;
+    width: 27vw;
+    height: 20vw;
+    z-index: 2;
+    background-color: transparent;
+}
+.zhdanov{
+    left: 2vw;
+}
+
+.obj1-down{ 
+    width: 24vw;
+    height: 40%;
+    background-color: rgb(92, 92, 92);
+    margin-top: auto;
+    transform: translateX(-12vw);
+}
+.obj1-up{
+    margin-bottom: auto;
+    width: 24vw;
+    height: 15%;
+    background-color: rgb(92, 92, 92);
+
+}
+
+
+.obj1, .obj2{
+    text-align: left;
+    height: 100%;
+    width: 24vw;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    left: 200%;
+    animation: animation 5s infinite linear;
+    background-color: transparent;
+    z-index: 3;
+}
+
+
+.bomb{
+    position: fixed;
+    width: 2vh;
+    height: 2vh;
+    left: 5%;
+    z-index: 36;
+    background-color: blue;
+}
+
+.tank{
+    width: 35vw;
+    height: 20vw;
+    position: relative;
+    top: 80%;
+    left: 120%;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.animate{
+    animation: animationTank 3s  linear;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+button, .punkty{
+    border: 3px solid yellow;
+    color: yellow;
+    background-color: transparent;
+    width: 10vw;
+    height: 100%;
+    height: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0;
+    font-weight: bold;
+    width: 33.3vw;
+}
+.punkty{
+    color: white;
+    border: 3px solid white;
+    width: 100vw !important;
+    
+
+}
+.button-con{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+}
+.buttonDiv{
+    width: 100vw!important;
+    display: flex;
+    flex-wrap: wrap;
+    height: 20vh;}
+.buttonDiv>button{
+    height: 5vh;
+    font-size: medium !important;
+
+}
+.mars{
+    border: 3px solid red;
+    color: red;
+    width: 33.3vw ;
+
+}
+.księżyc{
+    border: 3px solid white;
+    color: white;
+    width: 33.3vw ;
+
+}
+.germania{
+    width: 33.3vw ;
+
+}
+.mars:hover{
+    border: 3px solid red;
+    background-color: red;
+    font-weight: bold;
+    color: black;
+}
+.księżyc:hover{
+    border: 3px solid white;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+}
+.germania:hover{
+    border: 3px solid yellow;
+    color: black;
+    background-color: yellow;
+    font-weight: bold;
+}
+
+span{
+    margin: 10px;
+    color: white;
+}
+.menu{
+    position: fixed;
+    top: 0vh;
+    right: 0px;
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    height: 0vw;
+    transition-duration: 1s;
+}
+.visibleMenu{
+    height: 8.3vh;
+    transition-duration: 1s;
+}
+
+
+.menu>button{
+    margin-top: 0px;
+    width: 50%;
+    height: 100%;
+    border: 2px solid white;
+    color: white;
+    font-size: medium !important;
+}
+
+.alert{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 9999;
+    color: whitesmoke;
+    text-align: center;
+}
+.alrtItem, .alrtItem>button{
+    all: initial;
+}
+.start{
+    display: none;
+}
+.game-over{
+    display: none;
+}
+.over{
+    display: block !important;
+}
+
+@keyframes animation {
+    0%   {left: 150%;}
+    100% {left: -50%;}
+  }
+
+@keyframes animationTank {
+    0%   {left: 170%;}
+    100% {left: -70%;}
+  }
+
+  @media only screen and (max-width: 1200px) {
+    body{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template:  1fr 8fr 3fr/ 1fr;
+    }
+    button{
+        font-size: 1.5vw !important;
+    }
+
+    .buttonDiv>.bomba, #bomba{
+        width: 100vw !important;
+    }
+    .bombDiv{
+        width: 100vw;
+    }
+  }
+
+
+  @media only screen and (min-width: 500px){
+    .start{
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+    .center{
+        position: absolute;
+        left: 20%;
+        top: 30%;
+        width: 60%;
+        height: 25vh;
+
+    }
+    .startItem{
+        font: larger;
+        color: white;
+        text-align: center;
+
+    }
+    .startItem > button{
+        width: 100%;
+        height: 100%;
+        height: 10vh;
+        border: 2px solid white;
+        font-size: 2.5vh !important;
+        color: white;
+    }
+    .game-over{
+        display: none;
+    }
+
+    .over{
+        display: block !important;
+    }
+    
+  }
