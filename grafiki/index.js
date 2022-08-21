@@ -194,6 +194,7 @@ setInterval(() => {
 
 function animationShit(){
     losing = true
+    alert("dupa dupa dupa")
     document.querySelector(".game-over").classList.add("over")
     window.location.reload(true)}
 }
